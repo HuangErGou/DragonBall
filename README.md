@@ -48,3 +48,32 @@ make -j?
 make install
 ```
 
+### 编译 libwebsocket
+
+1. 编译x86 平台
+
+```
+mkdir build
+cd build
+
+cmake .. -DCMAKE_INSTALL_PREFIX=/home/huangqin/project/Zues/x86 -DLWS_WITH_SSL=0 -DLWS_WITHOUT_TESTAPPS=ON -DLWS_WITH_SHARED=OFF 
+
+make -j?
+
+make install
+```
+
+2. 编译arm64平台
+```
+mkdir build
+cd build
+
+export PATH=$PATH:/opt/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/
+
+cmake .. -DCMAKE_INSTALL_PREFIX=/home/huangqin/tmp/install -DCMAKE_TOOLCHAIN_FILE=../contrib/cross-aarch64.cmake -DLWS_WITH_SSL=0 -DLWS_WITHOUT_TESTAPPS=ON -DLWS_WITH_SHARED=OFF 
+
+make -j?
+
+make install
+```
+
