@@ -77,6 +77,8 @@ make -j?
 make install
 ```
 
+---
+
 ### 编译 libcure
 
 1. 编译x86 平台
@@ -97,5 +99,24 @@ make install
 make -j?
 
 make install
+```
+
+---
+
+### 编译 thrift
+
+1. 编译x86 平台 
+
+```
+./configure --prefix=/home/huangqin/tmp/ti/x86 --enable-shared=no --enable-static=yes  --with-boost=no --with-libevent=no --with-zlib=no --with-qt4=no --with-qt5=no --with-openssl=/home/huangqin/project/Zues/x86 --with-csharp=no --with-java=no --with-erlang=no --with-nodejs=no --with-lua=no --with-python=yes --with-py3=no --with-perl=no --with-php=no --with-php_extension=no --with-dart=no --with-ruby=no --with-haskell=no --with-go=no --with-rs=no --with-cl=no --with-haxe=no --with-dotnetcore=no --with-d=no
+
+make -j?
+
+make install
+```
+
+2. 编译arm64平台
+```
+nop
 ```
 
